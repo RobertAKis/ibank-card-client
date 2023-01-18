@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          client:
+            provider: spring
+            client-id: client
+            client-secret: secret
+            scope: openid,email
+        provider:
+          spring:
+            issuer-uri: "http://localhost:9000"
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: reactive
